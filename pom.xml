@@ -6,15 +6,27 @@
 
     <groupId>tw.idv.zmb.bdd</groupId>
     <artifactId>simple-framework</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
     <scm>
-        <connection>http://github.com/chuanghs/my-bdd-framework.git</connection>
+        <connection>scm:git:git@github.com:chuanghs/my-bdd-framework.git</connection>
     </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>my-snapshot</id>
+            <name>my internal repository</name>
+            <url>http://grave:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>my-releases</id>
+            <name>My internal repository</name>
+            <url>http://grave:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
